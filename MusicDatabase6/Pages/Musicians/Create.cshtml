@@ -1,0 +1,51 @@
+﻿@page
+@model MusicDatabase6.Pages.Musicians.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Musician</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <!-- Note the enctype attribute -->
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Musician.MusFName" class="control-label"></label>
+                <input asp-for="Musician.MusFName" class="form-control" />
+                <span asp-validation-for="Musician.MusFName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Musician.MusLName" class="control-label"></label>
+                <input asp-for="Musician.MusLName" class="form-control" />
+                <span asp-validation-for="Musician.MusLName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label">Upload Image</label>
+                <input type="file" asp-for="ImageFile" class="form-control" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

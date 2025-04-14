@@ -1,0 +1,37 @@
+﻿@page
+@model MusicDatabase6.Pages.Musicians.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Musician</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Musician.MusFName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Musician.MusFName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Musician.MusLName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Musician.MusLName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Musician.ImageName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Musician.ImageName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Musician.MusicianID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

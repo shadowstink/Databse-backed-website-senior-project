@@ -1,0 +1,63 @@
+﻿@page
+@model MusicDatabase6.Pages.Instruments.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].InstrumentSerial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].InstrumentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instrument[0].IsReturned)
+            </th>
+            <th>
+                Image
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Instrument) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstrumentSerial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstrumentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsReturned)
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.ImageName))
+                {
+                    <!-- Use the tilde (~) to indicate the web root. -->
+                    <img src="~/image/@item.ImageName" alt="@item.InstrumentType" style="max-height:100px; width:auto;" />
+                }
+                else
+                {
+                    <span>No Image</span>
+                }
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.InstrumentID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.InstrumentID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.InstrumentID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

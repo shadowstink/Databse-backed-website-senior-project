@@ -1,0 +1,105 @@
+html {
+    font-size: 14px;
+    
+}
+
+body {
+    background-image: url('../images/backgorund.jpg');
+    background-size: cover;
+}
+
+footer{
+background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* Full-page container for centering */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Full viewport height */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in dimensions */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style for large buttons */
+.large-button {
+    font-size: 1.5rem; /* Large text size */
+    padding: 15px 30px; /* Large padding */
+    background-color: #007bff; /* Primary blue color */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline (for links) */
+    margin: 0 10px; /* Add spacing between buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid #e5e5e5;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #d4d4d4;
+}
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.caption-top {
+    caption-side: top;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.caption-bottom {
+    caption-side: bottom;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    text-align: left;
+}
